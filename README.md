@@ -1,6 +1,6 @@
 # JS-Calculator-Lab
 
-## Part 1
+
 
 ### Requirements
 1. A user can view the calculator in Standard mode 
@@ -10,11 +10,16 @@
 
 ### Mock Ups
 
+## Part 1
+
 #### Standard View
 ![alt text](img/standardView.png)
+
+## Part 2
 
 #### Scientific View
 ![alt text](img/scientificView.png)
 
-## Part 2
-Will be released after part one completion....
+## Part 3
+
+Now using your responsive design skills, have the calculator's layout change to suit a desktop view and a mobile phone view
