@@ -38,13 +38,16 @@ class Calculator {
                 computation = prev + current
                 break
             case '-':
-                computation = prev + current
+                computation = prev - current
                 break
-            case '&times':
-                computation = prev + current
+            case '*':
+                computation = prev * current
                 break
-            case '&divide':
-                computation = prev + current
+            case '÷':
+                computation = prev / current
+                break
+            case '%':
+                computation = prev % current
                 break
             default:
                 return 
@@ -85,6 +88,11 @@ operationsButtons.forEach(button => {
 
 equalsButton.addEventListener('click', button => {
     calculator.compute()
+    calculator.updateDisplay()
+});
+
+allClearButton.addEventListener('click', button => {
+    calculator.clear()
     calculator.updateDisplay()
 });
 

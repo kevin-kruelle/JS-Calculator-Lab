@@ -1,6 +1,7 @@
 /* Grid only works for screens larger than 769px */
 
 body {
+    background-color: rgba(172, 252, 225, 0.75);
     display: flex; 
     justify-content: center;
     align-content: center;
@@ -8,6 +9,7 @@ body {
 }
 
 .gridContainer {
+    background-color: white;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
     grid-template-rows: 50px 50px 50px 50px 50px 50px;
@@ -43,7 +45,7 @@ body {
 }
 
 .display .current-operand {
-    color: white;
+    color: rgb(140,140,140);
     font-size: 2rem;
 }
 
