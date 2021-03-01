@@ -8,9 +8,9 @@ class Calculator {
     };
 
     clear() {
-        this.currentOperand = ''
-        this.previousOperand = ''
-        this.operation = undefined
+        this.currentOperand = '';
+        this.previousOperand = '';
+        this.operation = undefined;
     };
 
     appendNumber(number) {
@@ -22,10 +22,10 @@ class Calculator {
       if (this.currentOperand === '') return
       if (this.previousOperand !== '') {
           this.compute()
-      }
-      this.operation = operation
-      this.previousOperand = this.currentOperand
-      this.currentOperand = ''
+      };
+      this.operation = operation;
+      this.previousOperand = this.currentOperand;
+      this.currentOperand = '';
     };
 
     compute() {
@@ -52,9 +52,9 @@ class Calculator {
             default:
                 return 
         };
-        this.currentOperand = computation
-        this.operation = undefined
-        this.previousOperand = ''
+        this.currentOperand = computation;
+        this.operation = undefined;
+        this.previousOperand = '';
     };
 
     updateDisplay() {

@@ -1,7 +1,7 @@
 /* Grid only works for screens larger than 769px */
 
 body {
-    background-color: rgba(172, 252, 225, 0.75);
+    background-color: rgba(172, 236, 252, 0.75);
     display: flex; 
     justify-content: center;
     align-content: center;
@@ -11,9 +11,10 @@ body {
 .gridContainer {
     background-color: white;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
-    grid-template-rows: 50px 50px 50px 50px 50px 50px;
+    grid-template-columns: repeat(minmax((7, .5fr)(7, 1fr)));
+    grid-template-rows: repeat(6, 50px);
     grid-gap: 10px;
+    grid-auto-flow: dense;
     height: 450px;
     width: 1000px;
     border: 1px solid rgba(161, 161, 161, 0.5);
@@ -52,6 +53,7 @@ body {
 .first-row, .second-row, .third-row, .fourth-row, .fifth-row {
     grid-column-start: 1;
     grid-column-end: 8;
+    object-fit: cover;
     text-align: center;
 }
 
