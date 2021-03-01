@@ -1,4 +1,5 @@
-
+//Known issue:
+// My parenthesis are treated as numbers and don't serve a function. I'm working on fixing.
 
 class Calculator {
     constructor(previousOperandTextElement, currentOperandTextElement) {
@@ -21,38 +22,37 @@ class Calculator {
     chooseOperation(operation) {
       if (this.currentOperand === '') return
       if (this.previousOperand !== '') {
-          this.compute()
+          this.calculate()
       };
       this.operation = operation;
       this.previousOperand = this.currentOperand;
       this.currentOperand = '';
     };
 
-    compute() {
-        let computation
+    calculate() {
+        let calculation
         const prev = parseFloat(this.previousOperand)
         const current = parseFloat(this.currentOperand)
-        if (isNaN(prev) || isNaN(current)) return
         switch (this.operation) {
             case '+':
-                computation = prev + current
+                calculation = prev + current
                 break
             case '-':
-                computation = prev - current
+                calculation = prev - current
                 break
             case '*':
-                computation = prev * current
+                calculation = prev * current
                 break
             case '÷':
-                computation = prev / current
+                calculation = prev / current
                 break
             case '%':
-                computation = prev % current
+                calculation = prev % current
                 break
             default:
                 return 
         };
-        this.currentOperand = computation;
+        this.currentOperand = calculation;
         this.operation = undefined;
         this.previousOperand = '';
     };
@@ -63,6 +63,7 @@ class Calculator {
     };
 };
 
+//Select all elements I need to manipulate. 
 const numberButtons = document.querySelectorAll('.data-number');
 const operationsButtons = document.querySelectorAll('.data-operation');
 const equalsButton = document.querySelector('.data-equals');
@@ -87,7 +88,7 @@ operationsButtons.forEach(button => {
 });
 
 equalsButton.addEventListener('click', button => {
-    calculator.compute()
+    calculator.calculate()
     calculator.updateDisplay()
 });
 
